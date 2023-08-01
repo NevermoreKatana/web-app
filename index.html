@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose your character</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<script>
+    let tg = window.Telegram.WebApp;
+    tg.expand();
+
+    function handleTelegramButtonClick(alt, caption) {
+        var message = `Вы выбрали персонажа: ${caption}`;
+        tg.sendData(message);
+    }
+</script>
+
+<body>
+
+    <div class="container">
+
+        <button class="photo-button" onclick="handleTelegramButtonClick(this.alt, this.nextElementSibling.textContent)">
+            <img src="img/little_dragon.png" alt="Фотография 2">
+        </button>
+        <div class="caption">
+            <p>Little Dragon</p>
+        </div>
+
+        <button class="photo-button" onclick="handleTelegramButtonClick(this.alt, this.nextElementSibling.textContent)">
+            <img src="img/god.jpg" alt="Фотография 3">
+        </button>
+        <div class="caption">
+            <p>God</p>
+        </div>
+
+        <button class="photo-button" onclick="handleTelegramButtonClick(this.alt, this.nextElementSibling.textContent)">
+            <img src="img/strawberry.png" alt="Фотография 4">
+        </button>
+        <div class="caption">
+            <p>Sweet Strawberry</p>
+        </div>
+
+        <button class="photo-button" onclick="handleTelegramButtonClick(this.alt, this.nextElementSibling.textContent)">
+            <img src="img/rabbit.png" alt="Фотография 5">
+        </button>
+        <div class="caption">
+            <p>Cheerful Rabbit</p>
+        </div>
+
+        <button class="photo-button" onclick="handleTelegramButtonClick(this.alt, this.nextElementSibling.textContent)">
+            <img src="img/strong.png" alt="Фотография 6">
+        </button>
+        <div class="caption">
+            <p>Strong Man</p>
+        </div>
+
+        <button class="photo-button" onclick="handleTelegramButtonClick(this.alt, this.nextElementSibling.textContent)">
+            <img src="img/magic.jpg" alt="Фотография 7">
+        </button>
+        <div class="caption">
+            <p>Wizard</p>
+        </div>
+
+        <button class="photo-button" onclick="handleTelegramButtonClick(this.alt, this.nextElementSibling.textContent)">
+            <img src="img/dark.jpg" alt="Фотография 9">
+        </button>
+        <div class="caption">
+            <p>Darth Vader</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
